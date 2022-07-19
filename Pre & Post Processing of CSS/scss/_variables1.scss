@@ -1,0 +1,41 @@
+$FontSourse: 'Source Sans Pro', sans-serif;
+$FontHind: 'Hind', sans-serif;
+$FontFresca: 'Fresca', sans-serif;
+
+
+$contentBackground: url('../img/0.jpg');
+$images: ("1":"../img/1.jpg", "2":"../img/2.jpg", "3":"../img/3.jpg");
+
+$nav-text-color: #c1d1df;
+$card-text-color:#395369;
+$card-title-color: #8695a2;
+$review-title-color:#cba2b0;
+$review-bg-color: #8d6f79;
+$review-bg-card-color:#9d7a86;
+$search-tour-bg-color:#8695a2;
+$find-tour-title-color:#c1d1df;
+$search-text-color:#5e6872;
+$footer-bg-color:#3d5585;
+$footer-title-color:#659afe;
+$footer-list-color:#467ade;
+$footer-social-color:#0a275e;
+$footer-btn-color:#03225f;
+$placeholder-color-text:#d9dbe3;
+
+$map-colors: (
+	navText:$nav-text-color,
+    cardText:$card-text-color,
+    cardTitle:$card-title-color,
+    reviewTitle:$review-title-color,
+    reviewBg:$review-bg-color,
+    reviewBgCard:$review-bg-card-color,
+    searchTourBg:$search-tour-bg-color,
+    findTourTitle:$find-tour-title-color,
+    searchText:$search-text-color,
+    footerBg:$footer-bg-color,
+    footerTitle:$footer-title-color,
+    footerist:$footer-list-color,
+    footerSocial:$footer-social-color,
+    footerBtn:$footer-btn-color,
+    placeholder:$placeholder-color-text
+);

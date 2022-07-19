@@ -1,0 +1,227 @@
+/* 
+
+write your code here
+
+*/
+
+/* -----Task# 1----- */
+
+[class~='tm-content-box'], .tm-sidebar, #our-work{ 
+    box-shadow: 0 0 12px 0 rgba(61, 55, 61, 0.7);
+}
+#our-work .tm-content-box{
+    box-shadow: none;
+}
+.tm-banner{
+    background: rgba(128, 128, 128, 0.1);
+}
+.tm-banner-inner{
+    background: #ffffff;
+}
+#main .tm-section-description::first-letter {
+    font-size: 30px;  
+}
+
+/* -----Task# 2----- */
+
+li.tm-nav-item:hover{
+    background: #87CEFA;
+    color:#fff;
+}
+.tm-nav-item-link:hover{
+    color:#fff;
+}
+
+/* -----Task# 3 ----- */
+
+.section-title{
+    color:#87CEFA;
+    font-weight: bold;
+}
+/* -----Task# 3 a----- */
+.color-blue{
+    color:#87CEFA;
+}
+
+/* -----Task# 3 b----- */
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main img{
+    width: 100%;
+}
+.tm-team-description-container {
+    flex: 1 0 33.33%;
+}
+
+/* -----Task# 4----- */
+
+.tm-section-title-box:hover{
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.5s ease; 
+    transition: font-weight 0.5s ease; 
+}
+.box-bg:hover{
+    background: #87CEFA;
+    transition: background-color 0.5s ease;
+}
+.box-bg, .tm-section-title-box{
+    transition: all 0.5s ease;
+}
+
+
+/* -----Task# 5----- */
+ 
+section::before{
+    content:'';
+    display: block;
+    position: absolute; 
+    width: 0;
+    height: 0;
+    border-top: 33px solid #00C3D9;
+    border-right: 200px solid transparent;
+}
+
+/* -----Task# 6----- */
+
+.padding-medium ol{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.padding-medium li:not(:first-child){
+    margin-left:20px;
+}
+.padding-medium li:not(:last-child){
+    margin-right: 20px;
+}
+.padding-medium a:visited{
+    text-decoration: underline;
+}
+.padding-medium h2{
+    text-align: center;
+}
+.padding-medium h2{
+    text-transform: capitalize;
+}
+
+/* -----Task# 7----- */
+
+#our-work .tm-section-description:first-of-type{
+    font-style: italic;
+}
+#our-work .tm-section-description:last-of-type{
+    font-weight: bold;
+}
+
+/* -----Task# 8----- */
+#our-work .box {
+    padding: 0 10px 25px;
+}
+.box-work{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}  
+.box-work .link {
+    margin-top: auto;
+}
+li.box-work p {
+    font-style: italic;
+    font-size: 14px;
+}
+li.box-work h2{
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 24px;
+}
+li.box-work a{
+    cursor: pointer;
+    color: #87CEFA;
+}
+
+/* -----Task# 9----- */
+
+.carousel-content h2{
+    color:gainsboro;
+    letter-spacing: 5px;
+}
+
+/* -----Task# 10----- */
+
+.btn-primary{
+    background-color: white;
+    border-color:#87CEFA;
+    color:#87CEFA;
+    border-radius:0;
+    display: block;
+    margin-left: auto;
+    width: 165px;
+    height: 65px;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color:#87CEFA;
+    border-color:#87CEFA;
+}
+.mandatory-field::after{
+    content:'*';
+    display: block;
+    position: absolute; 
+    width: 0;
+    height: 0;
+    color:  red;
+    font-weight:bold; 
+    top: 0;
+    right: 13px; 
+}
+
+/* -----Task# 11----- */
+
+@media print {
+
+    .tm-main-content{
+        padding-top: 10px;
+    }
+    section::before{
+        display: none;
+    }
+    .flex-2-col .tm-section-title{
+        color: blue;
+        font-weight: normal;
+    }
+    .tm-sidebar {
+        display: none;
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .padding-medium{
+        padding: 0 45px;
+    }
+    .tm-team-description-container {
+        max-width: 100%;
+    }
+    .tm-content-box{
+        margin-bottom: 0;
+    }
+    .color-blue{
+        color: inherit;
+    }
+    #about, #we-are, #our-work, #ideas, #forms{
+      display: none;
+    } 
+    footer{
+      margin-top: 10px;
+    }
+}
+
+

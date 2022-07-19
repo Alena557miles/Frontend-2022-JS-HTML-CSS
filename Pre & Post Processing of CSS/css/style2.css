@@ -1,0 +1,237 @@
+html, body {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+header {
+  height: 100vh;
+  background-image: url("../img/4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%; }
+  header nav {
+    padding-top: 35px;
+    width: 50vw; }
+    header nav .header__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 15px;
+      margin: 0;
+      padding: 0; }
+      header nav .header__nav li {
+        display: inline;
+        text-align: center;
+        cursor: pointer; }
+        header nav .header__nav li .header__nav-link {
+          display: inline-block;
+          color: #69486a; }
+          header nav .header__nav li .header__nav-link:hover {
+            color: #8695a2; }
+        header nav .header__nav li .header__nav-link:not(:first-child) {
+          padding-right: 12px; }
+  header .header__text {
+    padding: 5vw;
+    margin: 10vw auto 0;
+    font-size: 3em;
+    color: #ddd;
+    text-align: center;
+    width: 50vw;
+    font-family: system-ui;
+    font-weight: 200; }
+  header .header__btn {
+    background: transparent;
+    border: 1px solid gray;
+    color: gray;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block; }
+    header .header__btn:hover {
+      color: white;
+      background-color: #0000005e; }
+
+main .cards .cards__wrap .card__item .card__content .card__content__title, main .review .review-title, main .search-individual-tour h2 {
+  text-align: center;
+  font-family: system-ui;
+  font-size: 2em;
+  font-weight: 200; }
+main .cards {
+  margin: 0vw 20vw; }
+  main .cards .cards_text {
+    margin: 0;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 4px;
+    font-family: "Hind", sans-serif;
+    font-weight: 200; }
+  main .cards .cards__wrap {
+    display: grid;
+    grid-gap: 3vw;
+    justify-content: center; }
+    main .cards .cards__wrap .card__item {
+      box-shadow: 0 0 10px gray;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      min-height: 300px;
+      align-items: center; }
+      main .cards .cards__wrap .card__item .card__img {
+        height: 100%;
+        min-height: 5vw;
+        align-self: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: top; }
+      main .cards .cards__wrap .card__item .card__content .card__content__title {
+        margin: 0;
+        color: #bd96ba; }
+      main .cards .cards__wrap .card__item .card__content .card__content__text {
+        color: #69486a;
+        padding: 2vh;
+        align-content: center;
+        display: grid;
+        margin: 0; }
+    main .cards .cards__wrap .card__item:nth-child(1) .card__img {
+      background-image: url(../img/5.jpeg); }
+    main .cards .cards__wrap .card__item:nth-child(2) .card__img {
+      background-image: url(../img/6.jpg); }
+    main .cards .cards__wrap .card__item:nth-child(3) .card__img {
+      background-image: url(../img/7.jpg); }
+main .review {
+  background-color: #8b708e;
+  width: 80vw;
+  display: grid;
+  padding: 1vw;
+  margin: 30px auto 0; }
+  main .review .review-title {
+    color: #cba3cc;
+    margin: 0 0 1vw; }
+  main .review .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1vw; }
+    main .review .reviews .review_card {
+      padding: 1vh;
+      display: grid;
+      background: #cba3cc;
+      grid-template-columns: 1fr 3fr; }
+      main .review .reviews .review_card .review-card__image {
+        width: 10vh;
+        height: 10vh;
+        border-radius: 50%;
+        align-self: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: top; }
+      main .review .reviews .review_card .review-card__text {
+        display: grid;
+        padding: 0 2vh;
+        align-content: center;
+        color: white;
+        font-size: 0.65em; }
+        main .review .reviews .review_card .review-card__text span {
+          font-style: italic; }
+      main .review .reviews .review_card .review-card__image-first {
+        background-image: url("./../img/woman.jpg"); }
+      main .review .reviews .review_card .review-card__image-second {
+        background-image: url("./../img/man.jpg"); }
+      main .review .reviews .review_card .review-card__image-third {
+        background-image: url("./../img/woman2.jpg"); }
+main .search-individual-tour {
+  width: 50vw;
+  padding: 1vw;
+  background-color: #a087a3;
+  margin: 12px auto 18px; }
+  main .search-individual-tour h2 {
+    color: #69486a; }
+  main .search-individual-tour .search-form {
+    display: grid;
+    grid-column-gap: .5vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; }
+    main .search-individual-tour .search-form .date {
+      display: grid;
+      grid-column-gap: .5vw;
+      grid-template-columns: 1fr 1fr; }
+    main .search-individual-tour .search-form input {
+      background: transparent;
+      border: transparent;
+      border-bottom: 1px solid #715e74; }
+    main .search-individual-tour .search-form .search-form__inputs {
+      border: 0;
+      border-radius: 0;
+      background-color: #a087a3;
+      color: #715e74;
+      border-bottom: 1px solid #715e74; }
+
+footer {
+  display: grid;
+  height: 100%;
+  padding: 1vw 0 2vw;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #5d3a86; }
+  footer h3 {
+    color: #9b5af0; }
+  footer .social-network {
+    padding-left: 2vw; }
+    footer .social-network img {
+      width: 2vw;
+      height: 2vw;
+      padding-right: 1vw; }
+    footer .social-network h3 {
+      margin: 0 0 1vw 0; }
+    footer .social-network .social-network__copyright {
+      color: #531f75;
+      padding-top: 2vw; }
+  footer .footer__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    footer .footer__menu .tourism h3, footer .footer__menu .contacts h3 {
+      margin: 0 0 .5vw;
+      color: #9b5af0; }
+    footer .footer__menu .tourism ul, footer .footer__menu .contacts ul {
+      margin: 0;
+      padding: 0 0 0 1vw;
+      width: 100%; }
+      footer .footer__menu .tourism ul li, footer .footer__menu .contacts ul li {
+        list-style-type: none; }
+        footer .footer__menu .tourism ul li a, footer .footer__menu .contacts ul li a {
+          color: #6b3eae;
+          text-decoration: none;
+          font-size: 1em; }
+          footer .footer__menu .tourism ul li a:hover, footer .footer__menu .contacts ul li a:hover {
+            color: #0a275e; }
+  footer .feedback_and_payments {
+    display: grid; }
+    footer .feedback_and_payments .send-email {
+      padding-right: 2vw; }
+      footer .feedback_and_payments .send-email h3 {
+        margin: 1vw 0 0;
+        color: #000; }
+      footer .feedback_and_payments .send-email input {
+        width: 97%;
+        border: 0;
+        padding: .5vw;
+        color: #76769f;
+        margin-top: 1vw; }
+      footer .feedback_and_payments .send-email ::-webkit-input-placeholder {
+        color: #a087a3; }
+      footer .feedback_and_payments .send-email button {
+        margin-top: 1vw;
+        background: #531f56;
+        padding: .5vw;
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+        color: white; }
+        footer .feedback_and_payments .send-email button:hover {
+          background: #659afe;
+          color: white; }
+    footer .feedback_and_payments .payments__title {
+      margin: 1vw 0 0; }
+    footer .feedback_and_payments .payments__image img {
+      width: 3vw;
+      padding-right: 1vw; }

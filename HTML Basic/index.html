@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Basics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="main">
+      <div id="container">
+        <div id="content" role="main">
+          <!-- TODO: Content goes here -->
+          <header>
+            <img src="logo.png" id="logo" alt="epam">
+            <h1 id="home"><b>HTML Elements</b></h1>
+            <hr>
+          </header>
+          
+          <nav >
+            <a href="#home"><b>Home </b></a>
+            <a href="#headers"><b>Headers </b></a>
+            <a href="#article"><b>Article </b></a>
+            <a href="#table"><b>Table </b></a>
+            <a href="#list"><b>List </b></a>
+            <a href="#formats"><b>Text formats </b></a>
+            <a href="#blockquotes"><b>Blockquotes </b></a>
+            <a href="#form"><b>Form </b></a>
+          </nav>
+          <hr>
+          <main>
+            <section id="headers">
+              <h2>Header 2</h2>
+              <h3>Header 3</h3>
+              <h4>Header 4</h4>
+              <h5>Header 5</h5>
+              <h6>Header 6</h6>
+              <p>Pay attention to h1 tag inside section element. Font-size for h1 is the same as font-size for h2, because we have to use only one h1 on the page, and it is commonly used inside header</p>
+              <hr>
+            </section>
+            <section id="article">
+              <h2>Article</h2>
+              <img src="thumbnail.png" alt="<html>">
+              <p>
+                  <abbr title="Cascading Style Sheets">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type <kbd>COPY </kbd><i>filename.</i><s>Dinner`s at 5:00.</s><ins>Let's make that 7.</ins> This <del>text</del> has been struck.
+              </p>
+              <p>
+                  Lorem ipsum dolor sit amet, <a href="#">test link</a> adipiscing elit. <strong>This is strong</strong>. Nullam dignissim convallis est. Quisque aliquam.<em>This is emphasized</em>. 
+                  Donec faucibus. Nunc iaculis suscipit dui. <span>5<sup>3</sup> = 125</span>. Water is H<sub>2</sub>O. 
+                  Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>The New York Times </cite>(ThatТs a citation).<u>Underline.</u> Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. 
+                  Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+              </p>
+              <hr>
+            </section>
+            <section id="table">
+              <h2>Table</h2>
+              <table>
+                <colgroup>
+                  <!-- <col span="1" bgcolor="#f7f7f7"> -->
+                  <col span="1" style="background-color: #f7f7f7;">
+                  <col span="3">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>&numero;</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Division 1</td>
+                    <td>Division 2</td>
+                    <td>Division 3</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Division 1</td>
+                    <td>Division 2</td>
+                    <td>Division 3</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Division 1</td>
+                    <td>Division 2</td>
+                    <td>Division 3</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Division 1</td>
+                    <td>Division 2</td>
+                    <td>Division 3</td>
+                  </tr>
+                </tbody>
+              </table>
+               <hr>
+            </section>
+            <section id="list">
+              <h2>List</h2>
+              <h2>Unordered List</h2>
+              <ul>
+                <li>List item 1</li>
+                <li>List item 2
+                    <ul>
+                      <li>Some nested list item 1</li>
+                    </ul>
+                  </li>
+                <li>List item 3</li> 
+              </ul>
+              <h2>Ordered List</h2>
+              <ol>
+                <li>List item 1</li>
+                <li>List item 2
+                  <ol>
+                    <li>Some nested list item 1</li>
+                  </ol>
+                </li>  
+                <li>List item 3</li>
+              </ol>
+              <h3>Definition List</h3>
+                <dl>
+                  <dt>defines terms 1</dt>
+                  <dd>description 1</dd>
+                </dl>
+                <dl>
+                  <dt>defines terms 2</dt>
+                  <dd>description 2</dd>
+                </dl>
+              <label for="details">Details</label>
+              <select name="details" id="details">
+                  <option value="HTML">HTML</option>
+                  <option value="CSS">CSS</option>
+                  <option value="JS">JS</option>
+              </select>
+              <hr>
+            </section>
+            
+            <section id="formats">
+              <h2>Text formats</h2>
+              <h3>Article Text</h3>
+              <article>
+                <h2>Article title</h2>
+                <p>Article description</p>
+              </article>
+              <h3>Preformatted Text</h3>
+              <pre>
+<strong>Text </strong>
+  in a <strong>pre </strong> element
+    is displayed in a fixed-width
+font, and it preserves
+both           spaces and
+    line breaks
+              </pre>
+              <h3>Code</h3>
+              <pre>
+                <code>
+.wrapper {
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+}
+                </code>
+              </pre>
+              <hr>
+            </section>
+            <section id="blockquotes">
+              <h2>Blockquotes</h2>
+              <h4>Let's keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</h4>
+              <blockquote>
+                "If you go back a few hundred years, what we take for granted today would seem like magic-being able to talk to people over long distances, to transmit images, flying, accessing vast amounts of data like an oracle. These are all things that would have been considered magic a few hundred years ago."<br>
+                <a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon Musk</a>
+              </blockquote>
+              <hr> 
+            </section>
+            <section id="form">
+              <h2>Form</h2>
+              <h4>Element represent a document section containing interractive controls for submitting information</h4>
+              <form action="#">
+                 <fieldset>
+                   <label for="firstname">First name:</label>
+                   <input type="text" name="firstname" id="firstname"><br>
+                   <label for="surname">Surname:</label>
+                   <input type="text" name="surname" id="surname"><br>
+                   <label for="email">Email:</label>
+                   <input type="text" name="email" id="email"><br>
+                  </fieldset>
+                  <fieldset>
+                    <label for="male">Male</label>
+                    <input type="radio" name="male" id="male"><br>
+                    <label for="male">Female</label>
+                    <input type="radio" name="female" id="female"><br>
+                  </fieldset>
+                  <fieldset>
+                   <textarea name="textarea" id="textarea" cols="29" rows="10"></textarea><br>
+                  <button type="submit"> Submit</button>    
+                </fieldset>      
+              </form>
+            </section>
+          </main>
+          <footer>
+            &copy; Copyright Epam Systems
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+body{
+    background-color: rgb(249, 249, 245);
+}
+*{
+    box-sizing: border-box;
+}
+#root{
+    display: block;
+    margin: 0 auto;
+    max-width: 920px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10vh 0px;
+
+}
+.search-wrap{
+    display: grid;
+    grid-column-gap: 0.5vw;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: transparent;
+    border: 1px solid #5e6872;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    padding-left: 1.7rem;
+    opacity: 0.5;
+}
+button {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(61, 28, 249);
+    border-color: transparent;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(233, 241, 13);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+button:hover{
+    background-color: transparent;
+    border: 1px solid #5e6872;
+    color: #5e6872;
+    transition: 0.5s ease;
+}
+button:active{
+    background-color: rgb(189, 107, 189);
+    color:aqua;
+    transition: 0.5s ease;
+}
+#characters-wrap{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+.character-card{ 
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    min-height: 300px;
+    align-items: center;  
+    overflow: hidden;
+    margin-bottom: 0.75rem;  
+    border-radius: 0.5rem;
+    background-color:rgb(233, 233, 233);
+    box-shadow: rgb(0 0 0 / 16%) 7px 5px 6px -1px, rgb(0 0 0 / 9%) 0px 2px 4px -1px;
+} 
+.img-wrapper{
+    flex: 2 1 0%;
+    width: 100%;
+    height: 100%;
+}
+.img-wrapper img{
+    height: 100%;
+    min-height: 5vw;
+    align-self: center;
+}
+.character-content-wrapper{
+    padding-left: 3rem;
+    flex: 3 1 0%;
+    position: relative;
+    color: rgb(105, 46, 46);
+    display: flex;
+    font-size: 2.2rem;
+    flex-direction: column;
+}
+.delete-btn{
+    background-color: transparent;
+    border: 1px solid #5e6872;
+    color: #5e6872;
+    margin-right: 0.04rem;
+    width: 60%;
+    margin-left: 2.8rem;
+  
+}
+.delete-btn:hover{
+    background-color:  rgb(61, 28, 249);
+    border: transparent;
+    transition: background-color 0.5s ease;
+    color: rgb(233, 241, 13);
+}
+.hide{
+    display: none;
+}

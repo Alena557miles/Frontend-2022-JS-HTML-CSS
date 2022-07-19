@@ -1,0 +1,74 @@
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+body{
+    background: #ebf1fa;
+}
+main{
+    width: 60%;
+}
+input{
+    display: block;
+    margin-top: 8vh;
+    height: 45px;
+   text-align: center;
+   font-size: 19px;
+   background: #ebf1fa;
+   border-color: #fff;
+   border-radius: 13px;
+   font-family: 'Montserrat', sans-serif;
+}
+div{
+    padding: 10vh 0;
+    display: flex;
+    flex-wrap: wrap;
+   }
+button{
+    background-color: #ebf1fa;	
+    color:#8c9094;
+    border-radius: 11px;
+    font-size: 18px;
+    cursor: pointer;
+    height: 44px;
+    display: block;
+    border-color: #fff;
+    padding: 0 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+    font-family: 'Montserrat', sans-serif;
+}
+button:hover{
+    background-color:#c4d7dc;
+    transition: background-color 0.5s ease;
+    border-color: transparent;
+    color: #ebf1fa;
+}
+
+.click{
+    border-radius: 50%;
+    height: 450px;
+    width: 450px;
+    background-color:#ebf1fa;
+    font-size: 30px;
+    display: block;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: -9px -8px 23px 0px white, 8px 1px 10px 0px grey;
+}
+.click:hover{
+    background-color:#c4d7dc;
+    transition: background-color 0.5s ease;
+
+}
+.click:active{
+    background-color:#c49bfa;
+    transition: background-color 0.5s ease;
+}
+.redbox{
+    display: block;
+    height: 100px;
+    width: 100px;
+    background: yellow;
+    cursor: all-scroll;
+}

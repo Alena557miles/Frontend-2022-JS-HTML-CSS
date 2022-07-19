@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 13 - JS DOM Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="avatar">
+            <div class="icons">
+                <img src="assets/woman.png" class="avatar-icon" data-item="1" alt="Avatar icon">
+                <img src="assets/boy.png" class="avatar-icon" data-item="2" alt="Avatar icon">
+                <img src="assets/girl.png" class="avatar-icon" data-item="3" alt="Avatar icon">
+                <img src="assets/business-man.png" class="avatar-icon" data-item="4" alt="Avatar icon">
+            </div>
+            <div>
+                <div class="avatar-container"></div>
+                <span class="playerX">X</span>
+                <div class="avatar-container"></div>
+                <span class="playerO">O</span>
+            </div>
+        </div>
+        <main>
+            <div class="title">
+                <h1>Tic Tac Toe</h1>
+            </div>
+            <div class="display">
+                Player <span class="display-player playerX">X</span> turn
+            </div>
+            <div class="container"></div>
+            <div class="display announcer hide"></div>
+            <div class="controls">
+                <button id="reset">Reset</button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

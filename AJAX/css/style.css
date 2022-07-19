@@ -1,0 +1,163 @@
+/* Write your code here */
+*{
+    box-sizing: border-box;
+}
+h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 3.5rem;
+    color: rgb(153, 100, 100);
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+button{
+    display: block;
+    width: 10%;
+    height: 3rem;
+    font-size: 1.1rem;
+    color: rgb(153, 100, 100);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px dashed rgb(153, 100, 100);
+    border-radius: 0.5rem;
+    background: transparent;
+    box-shadow: 10px 20px 30px rgb(153, 100, 100);
+}
+button:hover{
+    color: rgb(206 191 191);
+    background: rgb(153, 100, 100);
+    transition:  0.5s ease;
+}
+button:active{
+    box-shadow: none;
+    transition:  0.8s ease;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 100px 0;
+}
+.js-container, .fetch-container{
+    border: 1px dashed rgb(153, 100, 100);
+    border-radius: 0.5rem;
+    min-height: 500px;
+    min-width: 30vw;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.element{
+    background: #fcf9f8;
+    padding: 20px 0;
+}
+h3{
+    text-align: center;
+    font-size: 1.6rem;
+    color: rgb(153, 100, 100);
+    margin-bottom: 1rem;
+}
+.edit, .delete, .save{
+    display: block;
+    width: 20%;
+    height: 2rem;
+    font-size: 1.1rem;
+    color: rgb(153, 100, 100);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: none;
+}
+/* .edit:hover, .delete:hover, .save:hover{
+    opacity: 0.7;
+} */
+.edit{
+    background:#a8b8a1;
+}
+.delete{
+    background:#71675c;
+    color: rgb(208, 174, 174);
+}
+.save{
+    background:#b0a2dd;
+}
+.correct {
+    /* padding: 1rem 0; */
+    margin-top: 20px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+input{
+    width: 50%;
+    height: 2.4rem;
+    border: 1px dashed rgb(153, 100, 100);
+    border-radius: 0.5rem;
+}
+.hidden{
+    display: none;
+}
+.item-js{
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: rgb(153, 100, 100);
+    background: whitesmoke;
+}
+button .edit:focus .correct{
+    display: flex;
+    background: #71675c;
+}
+.fetch-container{
+    position: relative;
+}
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 2;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+}
+.loader{
+    width: 75px;
+    height: 75px;
+    border:10px solid #fff;
+    border-radius: 50%;
+    border-top-color: pink;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: 1s spin infinite linear;
+}
+.done{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes spin{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,360 @@
+
+@mixin cardimg ($url){
+    background-image: url($url);
+}
+
+
+html, body {
+    margin: 0; 
+}
+a{
+    text-decoration: none; 
+}
+
+header {
+    height: 100vh;
+    background-image: $contentBackground;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%; 
+
+    nav{
+        padding-top: 35px;
+        width: 50vw;
+
+        .header__nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+
+            li{
+                display: inline;
+                text-align: center;
+                cursor: pointer; 
+
+                .header__nav-link{
+                    display: inline-block;
+                    color:map-get($map-colors, navText);
+                    &:hover{
+                    color: #8695a2;
+                    }
+                }
+                .header__nav-link:not(:first-child){
+                    padding-right: 12px;
+                }
+            }
+        }
+    }
+
+    .header__text{
+        padding: 5vw;
+        margin: 10vw auto 0;
+        font-size: 3em;
+        color: #ddd;
+        text-align: center;
+        width: 50vw; 
+        font-family: system-ui;
+        font-weight: 200; 
+    }
+
+    .header__btn{
+        background: transparent;
+        border: 1px solid gray;
+        color: gray;
+        padding: 1vw 2vw;
+        cursor: pointer; 
+        margin: 0 auto;
+        display: block;
+        &:hover{
+            color: white;
+            background-color: #0000005e;
+        }
+    }
+   
+}
+
+
+main{
+    %title{
+        text-align: center;
+        font-family: system-ui;
+        font-size: 2em;
+        font-weight: 200; 
+    }
+    .cards{
+        margin: 0vw 20vw;
+    
+        .cards_text{
+            margin: 0;
+            font-size: 2.2em;
+            text-align: center; 
+            margin-bottom: 4px;
+            font-family:$FontHind; 
+            font-weight: 200;
+        }
+        .cards__wrap{
+            display: grid;
+            grid-gap: 3vw;
+            justify-content: center; 
+        
+            .card__item{
+                box-shadow:0 0 10px gray;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                min-height: 300px;
+                align-items: center;
+        
+                .card__img{
+                    height: 100%;
+                    min-height: 5vw;
+                    align-self: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position-y: top; 
+                }
+                .card__content{
+        
+                    .card__content__title{
+                        @extend %title;
+                        margin: 0;
+                        color:map-get($map-colors,cardTitle); 
+                        
+                    }
+        
+                    .card__content__text{
+                        color: map-get($map-colors,cardText);
+                        padding: 2vh;
+                        align-content: center;
+                        display: grid;
+                        margin: 0;
+                       
+                    }
+                }
+            }
+            @each $i, $images in $images{
+                .card__item:nth-child(#{$i}) .card__img{
+                    @include cardimg(#{$images});
+                }
+            }
+            
+        }
+    }
+    
+    
+    .review {
+        background-color: map-get($map-colors,reviewBg);
+        width: 80vw;
+        display: grid;
+        padding: 1vw; 
+        margin: 30px auto 0;
+    
+        .review-title{
+            color:map-get($map-colors,reviewTitle);
+            margin:0 0 1vw; 
+            @extend %title;
+        }
+        .reviews {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 1vw; 
+    
+            .review_card{
+                padding: 1vh;
+                display: grid;
+                background: map-get($map-colors,reviewBgCard);
+                grid-template-columns: 1fr 3fr;
+            
+                .review-card__image {
+                    width: 10vh;
+                    height: 10vh;
+                    border-radius: 50%; 
+                    align-self: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position-y: top; 
+                }
+                .review-card__text {
+                    display: grid;
+                    padding: 0 2vh;
+                    align-content: center;
+                    color: white; 
+                    font-size: 0.65em;
+                
+                    span {
+                    font-style: italic; 
+                    }
+                }
+                .review-card__image-first{
+                    background-image: url("./../img/woman.jpg"); 
+                }
+                .review-card__image-second{
+                    background-image: url("./../img/man.jpg"); 
+                }
+                .review-card__image-third{
+                    background-image: url("./../img/woman2.jpg"); 
+                }
+            }
+        }
+    }
+    
+    
+    .search-individual-tour {
+        width: 50vw;
+        padding: 1vw;
+        background-color:map-get($map-colors,searchTourBg);
+        margin: 12px auto 18px;
+    
+        h2 {
+            @extend %title;
+            color:map-get($map-colors,findTourTitle);
+        }
+    
+        .search-form {
+            display: grid;
+            grid-column-gap: .5vw;
+            grid-template-columns: 1fr 1fr 1fr ;
+            justify-items: center;
+            
+            .date {
+                display: grid;
+                grid-column-gap: .5vw;
+                grid-template-columns: 1fr 1fr;   
+            }
+            input{
+                background: transparent;
+                border: transparent;
+                border-bottom: 1px solid map-get($map-colors,searchText);
+            }
+            .search-form__inputs { 
+                border: 0; 
+                border-radius: 0; 
+                background-color: map-get($map-colors,searchTourBg);
+                color: $search-text-color;
+                border-bottom: 1px solid map-get($map-colors,searchText);
+            }
+        }
+    }
+}
+
+footer {
+    display: grid;
+    height: 100%;
+    padding: 1vw 0 2vw;
+    grid-template-columns: repeat(3, 1fr);
+    background-color:map-get($map-colors, footerBg);
+
+    h3{
+        color: map-get($map-colors, footerTitle);
+    }
+    .social-network {
+      padding-left: 2vw; 
+    
+        img {
+            width: 2vw;
+            height: 2vw;
+            padding-right: 1vw; 
+        }
+        h3 {
+            
+            margin: 0 0 1vw 0; 
+        }
+        .social-network__copyright {
+        color:map-get($map-colors,footerSocial);
+        padding-top: 2vw; 
+        }
+    }
+    .footer__menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    
+        .tourism, .contacts{
+            h3 {
+                margin: 0 0 .5vw;
+                color:map-get($map-colors, footerTitle);
+            }
+            ul{
+                margin: 0;
+                padding: 0 0 0 1vw;
+                width: 100%;
+    
+                li{
+                    list-style-type: none;
+                    a{
+                        color: map-get($map-colors,footerist);
+                        text-decoration: none;
+                        font-size: 1em;  
+                        &:hover{
+                            color: #0a275e; 
+                        }
+                    }
+                    
+                }
+            }
+        }
+    } 
+    .feedback_and_payments {
+        display: grid; 
+    
+        .send-email {
+            padding-right: 2vw; 
+            
+            h3 {
+                margin: 1vw 0 0; 
+                color: #000;
+            }
+            input {
+                width: 97%;
+                border: 0;
+                padding: .5vw;
+                color: #76769f; 
+                margin-top: 1vw;
+            }
+            ::-webkit-input-placeholder { 
+                color:map-get($map-colors, placeholder);
+            }
+            button {
+                margin-top: 1vw;
+                background:map-get($map-colors,footerBtn);
+                padding: .5vw;
+                width: 100%;
+                border: 0;
+                cursor: pointer;
+                color: white; 
+                &:hover {
+                    background: #659afe;
+                    color: white; 
+                }
+            }
+             
+        }
+        .payments__title{ 
+            margin: 1vw 0 0; 
+        }
+       .payments__image img {
+            width: 3vw;
+            padding-right: 1vw; 
+        }
+    }
+}   
+
+
+
+
+
+
+
+
+
+     
+
+   
+   
+  
+
+
+   
